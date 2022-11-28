@@ -7,7 +7,7 @@ function addItem(){
     let taskItem = document.createElement('div');
     let textTask = document.getElementById('add').value;
     taskItem.innerHTML = "<span>"+textTask+"</span>";
-    taskItem.innerHTML += "<button onclick=removeItem()>X</button>";
+    taskItem.innerHTML += "<button onclick=removeItem(this)>X</button>";
     taskItem.setAttribute('id','task'+nbTasks);
     taskItem.setAttribute('class','todo');
     
@@ -18,8 +18,6 @@ function addItem(){
 
 // Supprimer une tâche
 
-function removeItem(){
-    this.addEventListener('click',(e) => {
-        e.target.parentNode.remove();
-    });
+function removeItem(e){
+    e.target.parentNode.remove();
 }
