@@ -19,10 +19,7 @@ function addItem(){
 // Supprimer une tâche
 
 function removeItem(){
-    let taches = document.getElementsByClassName("todo");
-    for(value of taches){
-        value.addEventListener('click',(e) => {
-            e.target.parentNode.remove();
-        });
-    }
+    this.addEventListener('click',(e) => {
+        e.target.parentNode.remove();
+    });
 }
